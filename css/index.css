@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header.header {
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: orange;
+  padding: 6px;
+}
+
+div.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "title number";
+}
+
+div.title {
+  grid-area: title;
+  text-align: left;
+}
+
+div.number {
+  grid-area: number;
+  text-align: right;
+}
+
+a.number {
+  text-decoration: none;
+}
