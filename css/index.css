@@ -1,18 +1,56 @@
 html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-.container {
+div.container {
   max-width: 900px;
+  width: 100%;
   margin: 0 auto;
+}
+
+div.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header-img header-img"
+    "services	service-areas"
+    "contact	contact"
+    "footer-img	footer-img"
+  ;
 }
 
 header.header {
   font-size: 1.5em;
   font-weight: bold;
-  background-color: orange;
+  background-color: black;
   padding: 6px;
+  color: white;
+}
+
+#header-img {
+  width: 100vw;
+  max-width: 900px;
+  grid-area: header-img;
+}
+
+#footer-img {
+  width: 100vw;
+  max-width: 900px;
+  grid-area: footer-img
+}
+
+#services {
+  grid-area: services;
+}
+
+#service-areas {
+  grid-area: service-areas;
+}
+
+#contact {
+  grid-area: contact;
 }
 
 div.header {
@@ -33,4 +71,30 @@ div.number {
 
 a.number {
   text-decoration: none;
+  color: white;
+}
+
+section {
+  padding: 0 5px;
+}
+
+@media screen and (max-width: 700px) {
+  div.header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "title"
+      "number";
+  }
+
+  div.title, div.number {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    width: 100vw;
+  }
 }
