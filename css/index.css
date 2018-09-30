@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-size: 16px;
   overflow-x: hidden;
 }
 
@@ -30,13 +31,13 @@ header.header {
 }
 
 #header-img {
-  width: 100vw;
+  width: 100%;
   max-width: 900px;
   grid-area: header-img;
 }
 
 #footer-img {
-  width: 100vw;
+  width: 100%;
   max-width: 900px;
   grid-area: footer-img
 }
@@ -63,6 +64,7 @@ div.yelp-badge {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1rem;
 }
 
 div.header {
@@ -103,10 +105,14 @@ section {
   div.title, div.number {
     text-align: center;
   }
+
+  section#contact-section {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 900px) {
   body {
-    width: 100vw;
+    width: 100%;
   }
 }
