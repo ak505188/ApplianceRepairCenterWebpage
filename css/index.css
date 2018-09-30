@@ -49,8 +49,20 @@ header.header {
   grid-area: service-areas;
 }
 
-#contact {
+#contact-section {
   grid-area: contact;
+  display: flex;
+  flex-direction: row;
+}
+
+div.contact-info {
+  flex: 1;
+}
+
+div.yelp-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 div.header {
